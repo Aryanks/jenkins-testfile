@@ -1,0 +1,19 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8.10.0
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+        # - run:
+        #  name: install-dependencies
+      
+      - run:
+         command: npm install
+        
+      
+      - run:
+command: node main.js
